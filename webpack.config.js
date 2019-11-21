@@ -2,7 +2,7 @@ const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");        //提取成单个css文件
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');      //压缩css插件
+//const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');      //压缩css插件
 
 
 module.exports = {
@@ -25,7 +25,7 @@ module.exports = {
     new MiniCssExtractPlugin({
         filename: "./src/css/[name].[hash:8].css"
     }),
-    new OptimizeCssAssetsPlugin(),      //压缩css文件
+    //new OptimizeCssAssetsPlugin(),      //压缩css文件
     new CleanWebpackPlugin(),   //清除dist
     ],
     module:{
