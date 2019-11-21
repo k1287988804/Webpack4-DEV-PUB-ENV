@@ -35,6 +35,6 @@ webpack4版本踩坑之后自己搭建的一套开发者配置和一套生产者
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
 ```  
-具体安装流程可以参考我的两篇博客:
+具体安装流程可以参考我的两篇博客:  
 [开发模式](http://www.kongxiangbo.com/?p=1753)  
 [生产模式](http://www.kongxiangbo.com/?p=1850)
