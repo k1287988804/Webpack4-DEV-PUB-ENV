@@ -27,6 +27,7 @@ webpack4版本踩坑之后自己搭建的一套开发者配置和一套生产者
     "less-loader": "^5.0.0",
     "mini-css-extract-plugin": "^0.8.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "prop-types": "^15.7.2",
     "sass": "^1.23.7",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
@@ -39,7 +40,7 @@ webpack4版本踩坑之后自己搭建的一套开发者配置和一套生产者
 ```  
 
 ## 2019/11/22修正了配置文件，发现不需要babelrc.json文件  
-另外新安装了包：@babel/plugin-proposal-class-properties  和  @babel/runtime  
+另外新安装了包：@babel/plugin-proposal-class-properties  @babel/runtime  prop-types
 
 
 
