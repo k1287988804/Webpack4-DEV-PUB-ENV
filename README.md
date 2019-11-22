@@ -44,6 +44,58 @@ webpack4版本踩坑之后自己搭建的一套开发者配置和一套生产者
 
 
 
+##下面是全部安装语法：  
+npm i nrm -g 全局安装nrm 包  
+使用cnpm的获取镜像  
+输入以下命令  
+npm install -g cnpm --registry=https://registry.npm.taobao.org  
+输入cnpm -v输入是否正常  
+修改npm的资源镜像链接  
+npm config set registry http://registry.npm.taobao.org  
+  
+cnpm install nrm -g  
+使用nrm工具切换淘宝源    
+npx nrm use taobao  
+如果之后需要切换回官方源可使用   
+npx nrm use npm  
+安装yarn和react-native-cli  
+npm install -g yarn react-native-cli  
+设置yarn镜像地址：    
+yarn config set registry https://registry.npm.taobao.org --global  
+yarn config set disturl https://npm.taobao.org/dist --global  
+  
+在项目中：npm init -y  初始化npm管理  (建议使用yarn安装包)    
+cnpm install webpack -g  全局安装  
+cnpm install webpack --save-dev   安装到项目中  
+cnpm install webpack-cli  -g  
+cnpm install webpack-cli --save-dev  
+cnpm i jquery -s  
+cnpm i html-webpack-plugin -D   
+cnpm install style-loader css-loader -D  
+cnpm install less -D  
+cnpm install less-loader -D  
+cnpm install sass -D  
+cnpm install sass-loader -D  
+cnpm install popper -s  
+cnpm install bootstrap -s  
+cnpm install @babel/core -D  
+cnpm install babel-loader -D  
+cnpm install @babel/plugin-transform-runtime -D  
+cnpm install @babel/preset-env -D  
+cnpm install @babel/preset-react -D  
+cnpm install @babel/preset-stage-0 -D  
+cnpm install babel-preset-mobx -D  
+cnpm install mini-css-extract-plugin -D  
+cnpm install optimize-css-assets-webpack-plugin -D  
+cnpm install clean-webpack-plugin -D    
+cnpm install uglifyjs-webpack-plugin -D    
+cnpm i react react-dom -S  
+cnpm install -g yarn react-native-cli  
+cnpm i -D @babel/plugin-proposal-class-properties  
+cnpm i @babel/runtime -D  
+cnpm install prop-types -D  
+
+
 
 具体安装流程可以参考我的两篇博客:  
 [开发模式](http://www.kongxiangbo.com/?p=1753)  
