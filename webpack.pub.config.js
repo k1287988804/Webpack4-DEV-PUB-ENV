@@ -70,7 +70,12 @@ module.exports = {
                   // 默认使用 webpackOptions.output中的publicPath
                   publicPath: './../'    //为了找到images目录 
                 }
-            },'css-loader']}, //配置处理.css文件的第三方loader规则
+            },{
+                loader: 'css-loader',
+                options: {
+                    modules: true //开启css模块化
+                }
+            },],exclude: /node_modules/}, //配置处理.css文件的第三方loader规则  启用模块化
             {test:/\.less$/,use:['style-loader','css-loader','less-loader']},//配置.less文件的第三方loader
             {test:/\.scss$/,use:['style-loader','css-loader','sass-loader']},
             // {test:/\.(jpg|png|gif|bmp|jpeg)$/,use:'url-loader?limit=100&name=[hash:8]-[name].[ext]'},
