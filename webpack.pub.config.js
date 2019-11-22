@@ -73,7 +73,12 @@ module.exports = {
             },{
                 loader: 'css-loader',
                 options: {
-                    modules: true //开启css模块化
+                    modules:{
+                        mode: 'local',
+                        localIdentName: '[name]__[local]--[hash:base64:5]',
+                        context: path.resolve(__dirname, 'src'),
+                        hashPrefix: 'my-custom-hash',
+                    } //开启css模块化
                 }
             },],exclude: /node_modules/}, //配置处理.css文件的第三方loader规则  启用模块化
             {test:/\.less$/,use:['style-loader','css-loader','less-loader']},//配置.less文件的第三方loader

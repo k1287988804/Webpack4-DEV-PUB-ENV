@@ -31,11 +31,16 @@ module.exports = {
     module:{
         rules:[
             {test: /\.js|jsx$/, use:{loader:'babel-loader',options:{presets: ['@babel/preset-env','@babel/preset-react']}},exclude: /node_modules/},
-            {test:/\.css$/,use:['style-loader',{loader: 'css-loader',options: {modules: true}}],exclude: /node_modules/}, //配置处理.css文件的第三方loader规则  并启用模块化
+            {test:/\.css$/,use:['style-loader',{loader: 'css-loader',options: {modules:{
+                mode: 'local',
+                localIdentName: '[name]__[local]--[hash:base64:5]',
+                context: path.resolve(__dirname, 'src'),
+                hashPrefix: 'my-custom-hash',
+            }}}],exclude: /node_modules/}, //配置处理.css文件的第三方loader规则  并启用模块化
             {test:/\.less$/,use:['style-loader','css-loader','less-loader']},//配置.less文件的第三方loader
             {test:/\.scss$/,use:['style-loader','css-loader','sass-loader']},
             // {test:/\.(jpg|png|gif|bmp|jpeg)$/,use:'url-loader?limit=100&name=[hash:8]-[name].[ext]'},
-            {test: /\.(png|jpe?g|gif|svg|bmp)(\?.*)?$/,loader: 'url-loader',options: {limit: 100,name:'./images/[name].[hash:8].[ext]',}} , //处理图片路径的loader,如果引用的图片小于xxbytes则会转为base64
+            {test: /\.(png|jpe?g|gif|svg|bmp)(\?.*)?$/,loader: 'url-loader',options: {limit: 5000,name:'./images/[name].[hash:8].[ext]',}} , //处理图片路径的loader,如果引用的图片小于xxbytes则会转为base64
             {test:/\.(ttf|eot|svg|woff|woff2)$/,use:'url-loader'},  //处理字体文件
         ]
     }//用于配置所有第三方模块加载器
