@@ -98,6 +98,7 @@ cnpm i -D @babel/plugin-proposal-class-properties
 cnpm i @babel/runtime -D  
 cnpm install prop-types -D  
 cnpm install --save react-router-dom
+cnpm install antd --save
 
 
 
