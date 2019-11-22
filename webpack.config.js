@@ -2,7 +2,7 @@ const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");        //提取成单个css文件
-//const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');      //压缩css插件
+// const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');      //压缩css插件
 
 
 module.exports = {
@@ -25,12 +25,12 @@ module.exports = {
     new MiniCssExtractPlugin({
         filename: "./src/css/[name].[hash:8].css"
     }),
-    //new OptimizeCssAssetsPlugin(),      //压缩css文件
+    // new OptimizeCssAssetsPlugin(),      //压缩css文件
     new CleanWebpackPlugin(),   //清除dist
     ],
     module:{
         rules:[
-            { test: /\.js|jsx$/, use:'babel-loader',exclude: /node_modules/},
+            {test: /\.js|jsx$/, use:{loader:'babel-loader',options:{presets: ['@babel/preset-env','@babel/preset-react']}},exclude: /node_modules/},
             {test:/\.css$/,use:['style-loader','css-loader']}, //配置处理.css文件的第三方loader规则
             {test:/\.less$/,use:['style-loader','css-loader','less-loader']},//配置.less文件的第三方loader
             {test:/\.scss$/,use:['style-loader','css-loader','sass-loader']},
