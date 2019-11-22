@@ -1,12 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import $ from 'jquery'
-import Counter from './../components/Counter.jsx'
+import App from './../App.jsx'
 
 
-ReactDOM.render(<div>
-    <Counter initcount={3}></Counter>,
-    <Counter></Counter>
-</div>,$('#app')[0])
+
+
+ReactDOM.render(<App></App>,$('#app')[0])
 
 
