@@ -28,6 +28,9 @@ webpack4版本踩坑之后自己搭建的一套开发者配置和一套生产者
     "mini-css-extract-plugin": "^0.8.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
     "sass": "^1.23.7",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
@@ -94,6 +97,7 @@ cnpm install -g yarn react-native-cli
 cnpm i -D @babel/plugin-proposal-class-properties  
 cnpm i @babel/runtime -D  
 cnpm install prop-types -D  
+cnpm install --save react-router-dom
 
 
 
