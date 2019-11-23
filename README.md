@@ -99,7 +99,9 @@ cnpm i @babel/runtime -D
 cnpm install prop-types -D  
 cnpm install --save react-router-dom  
 cnpm install antd --save  
-cnpm install babel-plugin-import --save-dev
+cnpm install babel-plugin-import --save-dev  
+cnpm install fetch-jsonp -S
+
 
 
 
