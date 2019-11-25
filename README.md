@@ -72,6 +72,7 @@ cnpm install webpack -g  全局安装
 cnpm install webpack --save-dev   安装到项目中  
 cnpm install webpack-cli  -g  
 cnpm install webpack-cli --save-dev  
+cnpm install webpack-dev-server -D  
 cnpm i jquery -s  
 cnpm i html-webpack-plugin -D   
 cnpm install style-loader css-loader -D  
