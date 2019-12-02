@@ -2,6 +2,7 @@ const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");        //提取成单个css文件
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 // const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');      //压缩css插件
 
 
@@ -27,6 +28,7 @@ module.exports = {
     }),
     // new OptimizeCssAssetsPlugin(),      //压缩css文件
     new CleanWebpackPlugin(),   //清除dist
+    new VueLoaderPlugin(),
     ],
     module:{
         rules:[
@@ -52,6 +54,19 @@ module.exports = {
             // {test:/\.(jpg|png|gif|bmp|jpeg)$/,use:'url-loader?limit=100&name=[hash:8]-[name].[ext]'},
             {test: /\.(png|jpe?g|gif|svg|bmp)(\?.*)?$/,loader: 'url-loader',options: {limit: 5000,name:'./images/[name].[hash:8].[ext]',}} , //处理图片路径的loader,如果引用的图片小于xxbytes则会转为base64
             {test:/\.(ttf|eot|svg|woff|woff2)$/,use:'url-loader'},  //处理字体文件
+            {test:/\.vue$/,use:{loader:'vue-loader',
+            options:{presets: [["es2015", { "modules": false }]],
+            plugins: [["component", [
+                {
+                  "libraryName": "mint-ui",
+                  "style": true
+                }
+              ]]]}}},
         ]
-    }//用于配置所有第三方模块加载器
+    },//用于配置所有第三方模块加载器
+    resolve:{
+        alias:{
+            "vue$":"vue/dist/vue.js"
+        }
+    }
   }
