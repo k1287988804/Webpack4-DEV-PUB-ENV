@@ -107,8 +107,10 @@ cnpm install fetch-jsonp -S
 cnpm install vue -S  
 cnpm i vue-loader vue-template-compiler -D  
 cnpm i vue-loader-plugin -S  
+cnpm i vue-resource -D
 cnpm install mint-ui -S  
 cnpm install babel-plugin-component -D  
+
 
 如果用vue需要在webpack中手动删除less的模块化，因为已经有scoped属性
 
