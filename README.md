@@ -107,7 +107,7 @@ cnpm install fetch-jsonp -S
 cnpm install vue -S  
 cnpm i vue-loader vue-template-compiler -D  
 cnpm i vue-loader-plugin -S  
-cnpm i vue-resource -D
+cnpm i vue-resource -D  
 cnpm install mint-ui -S  
 cnpm install babel-plugin-component -D  
 
