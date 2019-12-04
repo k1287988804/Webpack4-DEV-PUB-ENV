@@ -75,7 +75,9 @@ module.exports = {
               ["component",{
                 "libraryName": "mint-ui",
                 "style": true
-              }]]}},
+              }]],
+              sourceType:"unambiguous"}
+            },
             exclude: /node_modules/},
             {test:/\.css$/,use:[{
                 loader: MiniCssExtractPlugin.loader,
@@ -85,16 +87,7 @@ module.exports = {
                   publicPath: './../'    //为了找到images目录 
                 }
             },'css-loader',]}, //配置处理.css文件的第三方loader规则 
-            {test:/\.less$/,use:['style-loader',{
-                loader:'css-loader',
-                options: {
-                    modules:{
-                        mode: 'local',
-                        localIdentName: '[name]__[local]--[hash:base64:5]',
-                        context: path.resolve(__dirname, 'src'),
-                        hashPrefix: 'my-custom-hash',
-                    } //开启模块化
-            }},'less-loader']},//配置.less文件的第三方loader
+            {test:/\.less$/,use:[MiniCssExtractPlugin.loader,'css-loader','less-loader']},//配置.less文件的第三方loader
             {test:/\.scss$/,use:['style-loader','css-loader','sass-loader']},
             // {test:/\.(jpg|png|gif|bmp|jpeg)$/,use:'url-loader?limit=100&name=[hash:8]-[name].[ext]'},
             {test: /\.(png|jpe?g|gif|svg|bmp)(\?.*)?$/,loader: 'url-loader',options: {limit: 5000,name:'./images/[name].[hash:8].[ext]',}} , //处理图片路径的loader,如果引用的图片小于xxbytes则会转为base64
