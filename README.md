@@ -113,6 +113,7 @@ cnpm install babel-plugin-component -D
 
 ## 2019/12/4 若想使用Mui的js文件  
 注意在babel的options里面加入：sourceType:"unambiguous"  
+cnpm install vuex -S
 
 
 如果用vue需要在webpack中手动删除less的模块化，因为已经有scoped属性
