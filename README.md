@@ -103,13 +103,16 @@ cnpm install antd --save
 cnpm install babel-plugin-import --save-dev  
 cnpm install fetch-jsonp -S
 
-## 2019/12/2 新加入vue和react通用包branch    
+## 2019/12/2 新加入vue和react通用包      
 cnpm install vue -S  
 cnpm i vue-loader vue-template-compiler -D  
 cnpm i vue-loader-plugin -S  
 cnpm i vue-resource -D  
 cnpm install mint-ui -S  
 cnpm install babel-plugin-component -D  
+
+## 2019/12/4 若想使用Mui的js文件  
+注意在babel的options里面加入：sourceType:"unambiguous"  
 
 
 如果用vue需要在webpack中手动删除less的模块化，因为已经有scoped属性
@@ -118,5 +121,6 @@ cnpm install babel-plugin-component -D
 
 
 具体安装流程可以参考我的两篇博客:  
+  
 [开发模式](http://www.kongxiangbo.com/?p=1753)  
 [生产模式](http://www.kongxiangbo.com/?p=1850)
