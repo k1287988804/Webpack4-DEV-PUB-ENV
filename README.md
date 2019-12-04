@@ -103,7 +103,7 @@ cnpm install antd --save
 cnpm install babel-plugin-import --save-dev  
 cnpm install fetch-jsonp -S
 
-## 2019/12/2 新加入vue和react通用包      
+## 2019/12/2 新加入vue和react通用版本，见react-and-vue分支        
 cnpm install vue -S  
 cnpm i vue-loader vue-template-compiler -D  
 cnpm i vue-loader-plugin -S  
