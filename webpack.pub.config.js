@@ -79,7 +79,7 @@ module.exports = {
                   publicPath: './../'    //为了找到images目录 
                 }
             },'css-loader',]}, //配置处理.css文件的第三方loader规则 
-            {test:/\.less$/,use:['style-loader',{
+            {test:/\.less$/,use:[MiniCssExtractPlugin.loader,{
                 loader:'css-loader',
                 options: {
                     modules:{
