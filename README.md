@@ -76,6 +76,8 @@ cnpm install webpack-dev-server -D
 cnpm i jquery -s  
 cnpm i html-webpack-plugin -D   
 cnpm install style-loader css-loader -D  
+cnpm install file-loader -D  
+cnpm install url-loader -D  
 cnpm install less -D  
 cnpm install less-loader -D  
 cnpm install sass -D  
