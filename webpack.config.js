@@ -60,5 +60,31 @@ module.exports = {
         alias:{
             "vue$":"vue/dist/vue.js"
         }
+    },
+    //反向代理
+    devServer: {
+        disableHostCheck: true,
+        host: 'localhost', // 默认是localhost
+        port: 3000, // 端口
+        hot: true, // 开启热更新
+        proxy: {
+            '/API/*': {
+                target: 'https://xiaojieapi.cn',
+                secure: false,
+                changeOrigin: true,
+                onProxyReq: (proxyReq, req) => {
+                    if (/^(localhost|[1-9][0-9]+)/.test(req.headers.host)) {
+                        // 写死cookie
+                        // proxyReq.setHeader(
+                        //     'Cookie',
+                        //     'serviceToken=tu4/pP6WfErBpvelEUiAbQV5a3c0kLpdAGO8RU7pyd9sINaQOnBhuzixKV+LToRUxqzdEuP0d60XpLjuJY5pnNB5P0YGWDNLIMdHP36CbxjG6j2kw9D35DhXoZ6Oxr9/hRQgvke2DV76BrkRw9cDppvMG8H5Af3JJuhHK9EmFY/rZQYSIFB3cPPZzuxjKm9eX3Fp0X3UFzBQh4PUMlVqWI+SZn3YuIfIPeRrrz47I7kT5SQXX3HUDqssdWTzItQN+9nuPpviV2LPOQPBXTRVl/gjjBL1tsOEu5W7N4kXwUc=; userId=3150060411; mifi-scf_slh=Q6anDKi8pKAnNGvXLqTJisTb7bk=; mifi-scf_ph=JW7MIGSFgF4KXnrXtQzxhg==; ROLE_MERCHANT=201158; Hm_lvt_2dd735d9e576dbdfc7535933de3e5a48=1585291143; Hm_lpvt_2dd735d9e576dbdfc7535933de3e5a48=1585291143'
+                        // );
+                    }
+                    if (req.headers && req.headers.cookie) {
+                        proxyReq.setHeader('Cookie', req.headers.cookie);
+                    }
+                },
+            },
+        },
     }
   }
