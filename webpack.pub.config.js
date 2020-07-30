@@ -10,7 +10,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');  
 module.exports = {
     mode: 'production',
     entry: {
-        bundle:path.join(__dirname,'./src/js/main.js'),  // 入口文件
+        bundle:path.join(__dirname,'./src/main.js'),  // 入口文件
         // pageB: "./pageB",  //多入口
 		// pageC: "./pageC"
     },

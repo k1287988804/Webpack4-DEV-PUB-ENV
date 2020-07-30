@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import $ from 'jquery'
-import App from './../App.jsx'
+import App from './App.jsx'
+
 
 
 
