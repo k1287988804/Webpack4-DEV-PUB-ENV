@@ -4,13 +4,9 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "pre-commit": "npm run lint",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --open --port 3000 --hot",
-    "pub": "webpack --config webpack.pub.config.js",
-    "lint": "npm run format && npm run fix &&  eslint --ext .js src",
-    "fix": "npm run format && eslint --fix --ext .js src",
-    "format": "prettier --single-quote --trailing-comma es5 --write \"src/**/*.js\""
+    "pub": "webpack --config webpack.pub.config.js"
   },
   "keywords": [],
   "author": "",
@@ -37,7 +33,6 @@
     "less-loader": "^5.0.0",
     "mini-css-extract-plugin": "^0.8.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "pre-commit": "^1.2.2",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
