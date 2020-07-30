@@ -8,7 +8,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
     mode: 'development',
-    entry: path.join(__dirname,'./src/js/main.js'), //入口,表示要打包哪个文件
+    entry: path.join(__dirname,'./src/main.js'), //入口,表示要打包哪个文件
     output:{
         path:path.join(__dirname,'./dist'),   //输出文件目录
         filename:'bundle.js'
