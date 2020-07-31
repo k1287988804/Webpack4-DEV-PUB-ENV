@@ -7,6 +7,8 @@ import Fetch from  './utils/fetch.js'
 Vue.prototype.$fetch = Fetch;
 import {Button} from 'element-ui'
 Vue.component(Button.name,Button);
+import {eventBus} from './utils/bus.js'
+Vue.prototype.eventBus = eventBus
 
 
 var vm = new Vue({
