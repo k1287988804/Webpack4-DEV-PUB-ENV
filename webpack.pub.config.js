@@ -73,8 +73,8 @@ module.exports = {
                 "style": "css" // `style: true` 会加载 less 文件
               }],
               ["component",{
-                "libraryName": "mint-ui",
-                "style": true
+                "libraryName": "element-ui",
+                "styleLibraryName": "theme-chalk" 
               }]],
               sourceType:"unambiguous"}
             },

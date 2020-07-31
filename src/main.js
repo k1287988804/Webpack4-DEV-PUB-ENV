@@ -5,6 +5,9 @@ Vue.use(VueRouter)
 import router from './common/router.js'
 import Fetch from  './utils/fetch.js'
 Vue.prototype.$fetch = Fetch;
+import {Button} from 'element-ui'
+Vue.component(Button.name,Button);
+
 
 var vm = new Vue({
     el:'#app',

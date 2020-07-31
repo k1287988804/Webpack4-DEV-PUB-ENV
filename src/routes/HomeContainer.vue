@@ -1,7 +1,8 @@
 <template>
   <div>
       <h1>Hello World</h1>
-      <input type="button" :value="text" @click="sayHi()">
+      <!-- <input type="button" :value="text" @click="sayHi()"> -->
+      <el-button type="primary" @click="sayHi()">点我</el-button>
   </div>
 </template>
 
