@@ -3,7 +3,8 @@ import { HashRouter, Route, Link } from 'react-router-dom'
 import { DatePicker } from 'antd';
 import Home from './routes/HomeContainer.jsx'
 import Api from './services/interface.js' 
-// import 'antd/dist/antd.css';
+import 'antd/dist/antd.css';
+import style from './css/style.less'
 
 
 export default class App extends React.Component {
@@ -27,6 +28,7 @@ export default class App extends React.Component {
         return <HashRouter>
             <div>
                 <h1>这是网站App的根组件</h1>
+                <div className={style.bg}></div>
                 <hr />
                 <Link to="/home">首页</Link>&nbsp;&nbsp;&nbsp;
         <Link to="/movie">电影</Link>&nbsp;&nbsp;&nbsp;
