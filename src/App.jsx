@@ -1,23 +1,23 @@
 import React from 'react'
-import {HashRouter,Route,Link} from 'react-router-dom'
+import { HashRouter, Route, Link } from 'react-router-dom'
 import { DatePicker } from 'antd';
 // import 'antd/dist/antd.css';
 
 
-export default class App extends React.Component{
-    static defaultProps ={
+export default class App extends React.Component {
+    static defaultProps = {
 
     }
-    constructor(props){
+    constructor(props) {
         super(props)
-        this.state={
+        this.state = {
 
         }
     }
 
-    render(){
+    render() {
 
-    return <HashRouter>
+        return <HashRouter>
     <div>
         <h1>这是网站App的根组件</h1>
         <hr/>
